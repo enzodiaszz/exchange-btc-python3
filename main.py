@@ -27,6 +27,9 @@ while True:
 
     elif log == 2:
         escolha_id = int(input('Escolha seu ID: '))
+        if escolha_id < 0:
+            print('Id inválido')
+            break
         id_searcher = verificador_id(escolha_id)
         if escolha_id == id_searcher:
             print('Esse ID já existe, execute de novo')
