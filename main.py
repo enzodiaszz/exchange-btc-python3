@@ -1,4 +1,4 @@
-from storage import btc_info, salvar, verificador_senha, obter, verificador_id, busca_usuario
+from storage import btc_info, salvar, verificador_senha, verificador_id, busca_usuario
 from models import Usuario, buy_btc, sell_btc
 
 
@@ -55,7 +55,7 @@ while True:
 
         elif escolha == 2:
             qtd = float(input('Quantidade de BTC a ser vendida:  '))
-            buy_btc(user, qtd)
+            sell_btc(user, qtd)
     
         elif escolha == 3:
             final_user = Usuario(user["id"], user["Nome"], user["SaldoBTC"], user["SaldoBRL"], user["senha"])
